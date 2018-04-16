@@ -1,0 +1,11 @@
+.site-logo {
+	// color: #000;
+}
+
+.site-logo__icon {
+	&>.icon {
+		font-size: 2rem;
+		fill: #ffff;
+		stroke: none;
+	}
+}

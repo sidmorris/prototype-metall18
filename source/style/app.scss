@@ -1,0 +1,14 @@
+@import 'fonts';
+@import 'sprite';
+// 1. Your custom variables and variable overwrites.
+@import "vars.scss";
+
+// 2. Import default variables and available mixins.
+@import "variables.scss";
+@import "mixins.scss";
+
+// 3. Your custom mixin overwrites.
+@import "common/**/*.scss";
+
+// 4. Import UIkit
+@import "uikit.scss";

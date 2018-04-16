@@ -1,0 +1,14 @@
+include bemto/lib/index.pug
+
+mixin icon(name,mod)
+	-var modificator = mod || ''
+		svg(class="icon icon-" + name + ' ' + modificator)
+			use(xlink:href="assets/img/sprite.svg#" + name)
+
+
+			
+mixin iconInline(name,mod)
+	-var modificator = mod || ''
+		svg(class="icon icon-" + name + ' ' + modificator)
+			use(xlink:href="#" + name)
+

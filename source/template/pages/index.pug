@@ -1,0 +1,14 @@
+extends ../_template.pug
+
+append variables
+	-var title = 'Home page';
+	-var pageClass = 'home';
+
+
+
+block content
+	header#header.header
+		.site-logo
+			.site-logo__icon
+				+iconInline('site-logo')
+		.uk-icon(uk-icon='phone')
