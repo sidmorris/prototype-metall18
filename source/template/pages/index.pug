@@ -27,9 +27,9 @@ block content
 						| +7 (000) 000-00-00
 			//- Site herou
 			.herou
-				h1(class="herou__title uk-heading-primary")
+				h1(class="herou__title")
 					span Металлоконструкции
-					span.world-accent на заказ
+					span.herou__world-accent на заказ
 				.herou__desc
 					h4(class="uk-heading-bullet") Изготовление изделий из металла, любой сложности.
 					h4(class="uk-heading-bullet") Мангалы нестандартных размеров, ограждения для цветников и клумб,
@@ -37,8 +37,10 @@ block content
 			//-hr(class="uk-divider-icon")
 			//- Навигация в шапке svg
 			.service-nav
-				ul(class="uk-iconnav uk-text-center")
-					li
-						a(href="#")
-							+iconInline('mangal')
-							p Item
+				ul(class="uk-iconnav service-nav__list")
+					each item in serviceNav
+						li.service-nav__item
+							a(href= item.link)
+								+iconInline(item.slug)
+								.service-nav__title= item.title
+						

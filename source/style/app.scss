@@ -8,7 +8,7 @@
 @import "mixins.scss";
 
 // 3. Your custom mixin overwrites.
-@import "common/**/*.scss";
 
 // 4. Import UIkit
 @import "uikit.scss";
+@import "common/**/*.scss";

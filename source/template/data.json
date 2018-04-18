@@ -1,2 +1,34 @@
 {
+  "serviceNav": {
+    "mangal": {
+      "slug": "mangal",
+      "link": "#mangal",
+      "title": "Мангалы"
+    },
+    "naves": {
+      "slug": "naves",
+      "link": "#naves",
+      "title": "Навесы"
+    },
+    "besedka": {
+      "slug": "besedka",
+      "link": "#besedka",
+      "title": "Беседки"
+    },
+    "lestnica": {
+      "slug": "lestnica",
+      "link": "#lestnica",
+      "title": "Лестницы"
+    },
+    "mebel": {
+      "slug": "mebel",
+      "link": "#mebel",
+      "title": "Мебель"
+    },
+    "reshetka": {
+      "slug": "reshetka",
+      "link": "#reshetka",
+      "title": "Решетки"
+    }
+  }
 }

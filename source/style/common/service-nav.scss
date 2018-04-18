@@ -1,0 +1,13 @@
+.service-nav{
+  &__item{
+    text-align: center;
+    .icon{
+      font-size: 6rem;
+      fill: #fff;
+    }
+  }
+  &__list{
+    width: 750px;
+    justify-content: space-between;
+  }
+}

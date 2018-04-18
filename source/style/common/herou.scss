@@ -3,4 +3,12 @@
     margin-top: 0;
     margin-bottom: 5px;
   }
+  &__title{
+    color: $color-accent-1;
+    font-size: 45px;
+  }
+  &__world-accent{
+    margin-left: 10px;
+    color: $color-accent-3;
+  }
 }
