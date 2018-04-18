@@ -9,9 +9,10 @@ append variables
 block content
 	header#header.header
 		.uk-container
+			//- navbar
 			nav(class="uk-navbar-container uk-navbar-transparent" uk-navbar)
 				.uk-navbar-left
-					a(href="index.html").site-logo__icon.uk-navbar-item.uk-logo.site-logo
+					a(href="index.html" class="site-logo__icon uk-navbar-item uk-logo site-logo")
 						+iconInline('site-logo')
 				.uk-navbar-center
 					ul.uk-navbar-nav
@@ -22,7 +23,22 @@ block content
 						li: a(href="/") Item
 				.uk-navbar-right
 					.phone
-						.phone__icon
-							span(uk-icon='icon:receiver')
-							| +7 (000) 000-00-00
-						
+						span(uk-icon='icon:receiver')
+						| +7 (000) 000-00-00
+			//- Site herou
+			.herou
+				h1(class="herou__title uk-heading-primary")
+					span Металлоконструкции
+					span.world-accent на заказ
+				.herou__desc
+					h4(class="uk-heading-bullet") Изготовление изделий из металла, любой сложности.
+					h4(class="uk-heading-bullet") Мангалы нестандартных размеров, ограждения для цветников и клумб,
+					h4(class="uk-heading-bullet") Навесы для автомобилей, садовая мебель для дачи и дома и многое другое.
+			//-hr(class="uk-divider-icon")
+			//- Навигация в шапке svg
+			.service-nav
+				ul(class="uk-iconnav uk-text-center")
+					li
+						a(href="#")
+							+iconInline('mangal')
+							p Item
