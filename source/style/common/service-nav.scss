@@ -1,13 +1,25 @@
-.service-nav{
-  &__item{
+.service-nav {
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    width: 200px;
+    background: transparent;
     text-align: center;
-    .icon{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    transition: ease .5s all;
+    .icon {
       font-size: 6rem;
       fill: #fff;
     }
+    &:hover{
+      background: lighten($color-accent-5, 20);
+      cursor: pointer;
+    }
   }
-  &__list{
-    width: 750px;
-    justify-content: space-between;
+  &__title{
+    color: $color-main-text;
   }
 }

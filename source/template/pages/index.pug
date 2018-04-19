@@ -10,9 +10,9 @@ block content
 	header#header.header
 		.uk-container
 			//- navbar
-			nav(class="uk-navbar-container uk-navbar-transparent" uk-navbar)
-				.uk-navbar-left
-					a(href="index.html" class="site-logo__icon uk-navbar-item uk-logo site-logo")
+			nav(class="uk-navbar-container uk-navbar-transparent uk-navbar" uk-navbar)
+				.uk-navbar-left.site-logo
+					a(href="index.html" class="site-logo__icon uk-navbar-item uk-logo")
 						+iconInline('site-logo')
 				.uk-navbar-center
 					ul.uk-navbar-nav
@@ -23,24 +23,25 @@ block content
 						li: a(href="/") Item
 				.uk-navbar-right
 					.phone
-						span(uk-icon='icon:receiver')
+						//- span(uk-icon='icon:receiver')
 						| +7 (000) 000-00-00
-			//- Site herou
-			.herou
+			//- ================================
+			.herou.header__herou
 				h1(class="herou__title")
-					span Металлоконструкции
-					span.herou__world-accent на заказ
-				.herou__desc
-					h4(class="uk-heading-bullet") Изготовление изделий из металла, любой сложности.
-					h4(class="uk-heading-bullet") Мангалы нестандартных размеров, ограждения для цветников и клумб,
-					h4(class="uk-heading-bullet") Навесы для автомобилей, садовая мебель для дачи и дома и многое другое.
-			//-hr(class="uk-divider-icon")
-			//- Навигация в шапке svg
-			.service-nav
-				ul(class="uk-iconnav service-nav__list")
-					each item in serviceNav
-						li.service-nav__item
-							a(href= item.link)
-								+iconInline(item.slug)
-								.service-nav__title= item.title
+					| Металлоконструкции на заказ
+				hr
+				p(class="herou__desc") 
+					| Изготовление изделий из металла, любой сложности.
+					| Мангалы нестандартных размеров, ограждения для цветников и клумб,
+					| Навесы для автомобилей, садовая мебель для дачи и дома и многое другое.
+	//- ========================================
+	section.section-service
+		.service-nav
+			.service-nav__list
+				each item in serviceNav
+					a(href= item.link class="service-nav__item")
+						+iconInline(item.slug)
+						.service-nav__title= item.title
+	//- =======================================
+	section.section-gallery
 						

@@ -1,14 +1,17 @@
-.herou{
-  &__desc > *{
-    margin-top: 0;
-    margin-bottom: 5px;
-  }
-  &__title{
-    color: $color-accent-1;
+.herou {
+  color: $color-accent-1;
+  text-shadow: 1px 1px darken($color-accent-4, 40);
+  &__title {
     font-size: 45px;
+    color: inherit;
+    font-weight: normal;
   }
-  &__world-accent{
-    margin-left: 10px;
-    color: $color-accent-3;
+  &__desc {
+    color: inherit;
+    font-size: 18px;
   }
+}
+
+.herou hr {
+  border-top: 1px solid darken($color-accent-1, 20);
 }

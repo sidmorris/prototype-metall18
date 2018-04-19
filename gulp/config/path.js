@@ -5,7 +5,8 @@ module.exports = {
 			'node_modules/foundation-sites/scss'
 		],
 		UIKIT: [
-			'node_modules/uikit/src/scss'
+			'node_modules/uikit/src/scss',
+			'node_modules/uikit/src/scss/components'
 		],
 		BOOTS: ['node_modules/bootstrap/scss']
 	},
