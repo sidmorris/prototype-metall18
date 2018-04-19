@@ -15,7 +15,7 @@
       fill: #fff;
     }
     &:hover{
-      background: lighten($color-accent-5, 20);
+      background: $color-accent-2;
       cursor: pointer;
     }
   }
