@@ -1,4 +1,45 @@
-.gallery{
-  background: $color-accent-3 ;
-  min-height: 500px;
+.gallery {
+  background: $color-accent-3;
+  padding-bottom: 60px;
+  &__title {
+    font-weight: normal;
+    font-size: 30px;
+    color: $color-accent-5;
+    margin-bottom: 40px;
+  }
+  &__container {
+    position: relative;
+  }
+  &__items {
+    &>li {
+      border: 2px solid $color-accent-5;
+    }
+  }
+  &__icon-previous,
+  &__icon-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 5px 10px;
+    color: $color-accent-1;
+    &>.icon {
+      font-size: 3rem;
+    }
+    &:hover {
+      color: darken($color-accent-1, 20);
+    }
+  }
+  &__icon-previous {
+    left: 0;
+  }
+  &__icon-next {
+    right: 0;
+  }
+  &__dotnav>*>* {
+    background: transparent;
+    border: 1px solid $color-accent-5
+  }
+  &__dotnav .uk-active>* {
+    background: $color-accent-5;
+  }
 }

@@ -44,15 +44,18 @@ block content
 						.service-nav__title= item.title
 	//- =======================================
 	section.gallery
-		.uk-container.gallery__container
-			div(class="uk-slideshow uk-position-relative uk-visible-toggle uk-light" uk-slideshow="")
-				ul(class="uk-slideshow-items")
+		.uk-container
+			h2(class="gallery__title uk-heading-divider") Фотогаллерея
+			div(class="gallery__container uk-slideshow" uk-slideshow="min-height: 300; max-height: 600")
+				ul(class="gallery__items uk-slideshow-items")
 					- var n=1;
 						while n < 10
 							- var count = n++;
-							li: img(src="assets/img/rabota/" + count + ".jpg" alt= count class="uk-cover" uk-cover="")
-				a(class="uk-position-center-left uk-slidenav-large" href="" uk-slidenav-previous uk-slideshow-item="previous")
-				a(class="uk-position-center-right uk-slidenav-large" href="" uk-slidenav-next uk-slideshow-item="next")
-
+							li: img(src="assets/img/rabota/" + count + ".jpg" alt= count class="gallery__item uk-cover" uk-cover="")
+				a(class="gallery__icon-previous" href="#" uk-slideshow-item="previous")
+					+iconInline('chevron-left')
+				a(class="gallery__icon-next" href="#" uk-slideshow-item="next")
+					+iconInline('chevron-right')
+				ul(class="gallery__dotnav uk-slideshow-nav uk-dotnav uk-flex-center uk-margin")
 
 						
