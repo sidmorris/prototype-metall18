@@ -5,10 +5,10 @@
     font-weight: normal;
     font-size: 30px;
     color: $color-accent-5;
-    margin-bottom: 40px;
   }
   &__container {
     position: relative;
+    padding-top: 20px;
   }
   &__items {
     &>li {
