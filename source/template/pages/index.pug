@@ -16,11 +16,9 @@ block content
 						+iconInline('site-logo')
 				.uk-navbar-center
 					ul.uk-navbar-nav
-						li.active: a(href="/") Home
-						li: a(href="/") Item
-						li: a(href="/") Item
-						li: a(href="/") Item
-						li: a(href="/") Item
+						li.active: a(href="/"  uk-scroll="") Главная
+						li: a(href="#gallery"   uk-scroll="") Фотогалерея
+						li: a(href="#contact"   uk-scroll="") Контакты
 				.uk-navbar-right
 					.phone
 						//- span(uk-icon='icon:receiver')
@@ -35,7 +33,7 @@ block content
 					| Мангалы нестандартных размеров, ограждения для цветников и клумб,
 					| Навесы для автомобилей, садовая мебель для дачи и дома и многое другое.
 	//- ========================================
-	section.section-service
+	section#service.section-service
 		.service-nav
 			.service-nav__list
 				each item in serviceNav
@@ -43,7 +41,7 @@ block content
 						+iconInline(item.slug)
 						.service-nav__title= item.title
 	//- =======================================
-	section.gallery
+	section#gallery.gallery
 		.uk-container
 			h2(class="gallery__title uk-heading-divider") Фотогаллерея
 			div(class="gallery__container uk-slideshow" uk-slideshow="min-height: 300; max-height: 600")
@@ -57,13 +55,19 @@ block content
 				a(class="gallery__icon-next" href="#" uk-slideshow-item="next")
 					+iconInline('chevron-right')
 				ul(class="gallery__dotnav uk-slideshow-nav uk-dotnav uk-flex-center uk-margin")
-	section.contact
+	section#contact.contact
 		.uk-container
-			h2(class="contact__title") Контакты
+			//- h2(class="contact__title") Контакты
 			.contact__container
 				.contact__map.map
 					.map__yandex
 				.contact__requisite.requisite
-					.requisite__phohe +7 (000) 000-00-00
-					.requisite__mail mail@mail.ru
-					.requisite__location address siti street
+					.requisite__phohe
+						span Телефон:
+						span +7 (000) 000-00-00
+					.requisite__mail
+						span Почта:
+						span mail@mail.ru
+					.requisite__location 
+						span Адрес:
+						span address siti street

@@ -3,6 +3,7 @@
 }
 .main-menu__item{
 	color:$color-accent-1;
+	font-size: 20px;
 	&:hover{
 		color: darken($color-accent-1, 20%);
 		text-decoration: none;

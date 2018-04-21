@@ -1,6 +1,32 @@
 .requisite{
   display: flex;
-  flex-direction: column;
+	align-content: stretch;
+	flex-wrap: wrap;
   box-sizing: border-box;
-  border-left: 1px solid $color-accent-3;
+	border-left: 1px solid $color-accent-4;
+	min-height: 300px;
+	&>*{
+		width:  100%;
+		border-bottom: 1px solid $color-accent-4;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&:last-child{
+			border-bottom: 1px solid transparent;
+			
+		}
+		&>*{
+			color: $color-accent-3;
+			width: 250px;
+			flex-grow: 3;
+			padding-left: 50px;
+			&:first-child{
+				font-weight: bold;
+				width: 100px;
+				flex-grow: 1;
+				text-align: right;
+			}
+		}
+
+	}
 }

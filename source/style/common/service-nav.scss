@@ -1,25 +1,38 @@
-.service-nav {
-  &__list {
-    display: flex;
-    justify-content: center;
+.service-nav__list {
+  display: flex;
+  justify-content: center;
+}
+
+.service-nav__item {
+  text-decoration: none;
+  color: #000;
+  width: 200px;
+  background: transparent;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  transition: ease .5s all;
+
+  .icon {
+    font-size: 6rem;
+    fill: $color-accent-2;
+    stroke: none;
   }
-  &__item {
-    width: 200px;
-    background: transparent;
-    text-align: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    transition: ease .5s all;
+
+  &:hover {
+    background: $color-accent-2;
+    cursor: pointer;
+
     .icon {
-      font-size: 6rem;
       fill: #fff;
     }
-    &:hover{
-      background: $color-accent-2;
-      cursor: pointer;
+
+    .service-nav__title {
+      color: #fff;
     }
   }
-  &__title{
-    color: $color-main-text;
-  }
+}
+
+.service-nav__title {
+  color: inherit;
 }
