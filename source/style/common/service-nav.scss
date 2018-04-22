@@ -5,18 +5,19 @@
 
 .service-nav__item {
   text-decoration: none;
-  color: #000;
+  color: $color-accent-2;
   width: 200px;
   background: transparent;
   text-align: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  transition: ease .5s all;
-
+	transition: ease .5s all;
+	
   .icon {
-    font-size: 6rem;
+		font-size: 6rem;
     fill: $color-accent-2;
-    stroke: none;
+		stroke: none;
+		filter: drop-shadow(1px 1px 1px transparentize(#000, .8));
   }
 
   &:hover {

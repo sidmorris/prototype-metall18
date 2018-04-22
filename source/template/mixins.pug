@@ -11,3 +11,7 @@ mixin iconInline(name,mod)
 	-var modificator = mod || ''
 		svg(class="icon icon-" + name + ' ' + modificator)
 			use(xlink:href="#" + name)
+
+mixin toTop(link)
+	a#toTop(href= link class="to-top")&attributes(attributes)
+		+iconInline('chevron-up')

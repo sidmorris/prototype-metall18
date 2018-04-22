@@ -37,7 +37,7 @@ block content
 		.service-nav
 			.service-nav__list
 				each item in serviceNav
-					a(href= item.link class="service-nav__item")
+					a(href=`#modal-${item.slug}` class="service-nav__item" uk-toggle="")
 						+iconInline(item.slug)
 						.service-nav__title= item.title
 	//- =======================================
@@ -71,3 +71,10 @@ block content
 					.requisite__location 
 						span Адрес:
 						span address siti street
+	//- modal content
+	include ../includes/modal-mangal.pug
+	include ../includes/modal-naves.pug
+	include ../includes/modal-besedka.pug
+	include ../includes/modal-lestnica.pug
+	include ../includes/modal-mebel.pug
+	include ../includes/modal-reshetka.pug

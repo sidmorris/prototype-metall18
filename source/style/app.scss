@@ -8,7 +8,12 @@
 @import "mixins.scss";
 
 // 3. Your custom mixin overwrites.
-
+@mixin hook-modal-title(){
+	color: $color-accent-5;
+}
+@mixin hook-modal-header(){
+display: flex;
+}
 // 4. Import UIkit
 // Base
 @import "variables.scss";

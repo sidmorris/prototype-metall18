@@ -1,0 +1,10 @@
+extend ../_layout-modal.pug
+
+append opt
+	- var service = serviceNav.naves;
+	- var title = service.title;
+	- var slug = service.slug;
+
+block modalContent
+	p= slug
+	p= title

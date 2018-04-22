@@ -1,0 +1,16 @@
+block opt
+	- var title = 'Вид товара';
+	- var slug = 'modal';
+
+div(id=`modal-${slug}` class="modal")
+	.modal__container
+		.uk-container
+			header.modal__header
+				h1( class="modal__title")= title
+				a(href="#" class="modal__close")
+					+iconInline('close')
+			
+		
+		
+			block modalContent
+		
