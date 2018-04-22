@@ -2,40 +2,33 @@
   color: $color-accent-2;
   background: transparent;
   text-align: center;
-  padding: 25px 40px;
   transition: ease .5s all;
   text-decoration: none;
   position: relative;
   overflow: hidden;
-  a{
+  padding: 25px 0px;
+  a {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
   }
-  &.uk-first-column{
-    padding-left: 80px;
-    @include bp-m{
-      padding-left: 40px;
-      
-    }
+  &.uk-first-column {
+    padding-left: 40px;
   }
   .icon {
-    font-size: 8rem;
+    font-size: 7rem;
     fill: $color-accent-2;
-		stroke: none;
-		filter: drop-shadow(1px 1px 1px transparentize(#000, .8));
+    stroke: none;
+    filter: drop-shadow(1px 1px 1px transparentize(#000, .8));
   }
-  
   &:hover {
     background: $color-accent-2;
     cursor: pointer;
-    
     .icon {
       fill: #fff;
     }
-    
     .service-nav__title {
       color: #fff;
     }
@@ -46,4 +39,21 @@
   color: $color-accent-2;
   font-size: 25px;
   margin-top: 5px;
+}
+
+@include bp-s {
+  .service-nav__item {
+    padding: 25px 40px;
+    .icon {
+      font-size: 8rem;
+    }
+  }
+}
+
+@include bp-m {
+  .service-nav__item {
+    &.uk-first-column {
+      padding-left: 40px;
+    }
+  }
 }
