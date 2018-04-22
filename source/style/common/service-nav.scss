@@ -1,16 +1,25 @@
-.service-nav{
-  
-}
-
 .service-nav__item {
-  text-decoration: none;
   color: $color-accent-2;
   background: transparent;
   text-align: center;
   padding: 25px 40px;
   transition: ease .5s all;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  a{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
   &.uk-first-column{
     padding-left: 80px;
+    @include bp-m{
+      padding-left: 40px;
+      
+    }
   }
   .icon {
     font-size: 8rem;
@@ -30,9 +39,6 @@
     .service-nav__title {
       color: #fff;
     }
-  }
-  @include bp-s{
-    // 
   }
 }
 

@@ -26,8 +26,8 @@ block content
 			each item in serviceNav
 				div.service-nav__item
 					a(href=`#modal-${item.slug}` uk-toggle="")
-						+iconInline(item.slug)
-						.service-nav__title= item.title
+					+iconInline(item.slug)
+					.service-nav__title= item.title
 	//- =======================================
 	section#gallery.gallery
 		.uk-container
