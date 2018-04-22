@@ -1,16 +1,37 @@
 block opt
-	- var title = 'Вид товара';
-	- var slug = 'modal';
+	- var service = serviceDefault;
 
-div(id=`modal-${slug}` class="modal")
+mixin cardTable(title)
+	tr
+		td.td-title= title
+		td
+			block
+
+
+mixin card(cardImg, cardTitle, cardDesc)
+	.wrap
+		div(class="card uk-grid-small uk-flex-center" uk-grid='')
+			div(class="card__img uk-width-1-2@m")
+				img(src=`assets/img/product/${cardImg}`, alt= cardTitle class="")
+			div(class="card__content uk-width-expand@m")
+				div(class="card__title")= cardTitle
+				div(class="card__desc")= cardDesc
+				div(class="card__table uk-table-responsive")
+					table( class="uk-table uk-table-divider uk-table-middle")
+						//- thead: tr
+						//- 	th.uk-width-small Элемент
+						//- 	th.uk-table-expand Описание
+						tbody
+							block
+		hr.uk-divider-icon
+
+
+div(id=`modal-${service.slug}` class="modal")
 	.modal__container
 		.uk-container
 			header.modal__header
-				h1( class="modal__title")= title
+				h1( class="modal__title")= service.title
 				a(href="#" class="modal__close")
 					+iconInline('close')
-			
-		
-		
+			hr
 			block modalContent
-		

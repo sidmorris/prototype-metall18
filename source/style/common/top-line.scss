@@ -1,0 +1,13 @@
+.top-line{
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  @include bp-s{
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 0px;
+
+  }
+}

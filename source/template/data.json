@@ -1,34 +1,46 @@
 {
+  "serviceDefault": {
+    "slug": "default",
+    "link": "#default",
+    "title": "default",
+    "img": "default.jpg"
+  },
   "serviceNav": {
     "mangal": {
       "slug": "mangal",
       "link": "#mangal",
-      "title": "Мангалы"
+      "title": "Мангалы",
+      "img": "mangal.jpg"
     },
     "naves": {
       "slug": "naves",
       "link": "#naves",
-      "title": "Навесы"
+      "title": "Навесы",
+      "img": "naves.jpg"
     },
     "besedka": {
       "slug": "besedka",
       "link": "#besedka",
-      "title": "Беседки"
+      "title": "Беседки",
+      "img": "besedka.jpg"
     },
     "lestnica": {
       "slug": "lestnica",
       "link": "#lestnica",
-      "title": "Лестницы"
+      "title": "Лестницы",
+      "img": "lestnica.jpg"
     },
     "mebel": {
       "slug": "mebel",
       "link": "#mebel",
-      "title": "Мебель"
+      "title": "Мебель",
+      "img": "default.jpg"
     },
     "reshetka": {
       "slug": "reshetka",
       "link": "#reshetka",
-      "title": "Решетки"
+      "title": "Решетки",
+      "img": "rechetki.jpg"
     }
   }
 }

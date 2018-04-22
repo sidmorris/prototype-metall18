@@ -2,9 +2,9 @@ extend ../_layout-modal.pug
 
 append opt
 	- var service = serviceNav.besedka;
-	- var title = service.title;
-	- var slug = service.slug;
+
 
 block modalContent
-	p= slug
-	p= title
+	+card('besedka.jpg', 'Беседка большая', "Описание для беседки большой")
+		+cardTable('Крыша')
+			| Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto velit possimus illum ipsa obcaecati in tempore cum fugiat esse aspernatur!

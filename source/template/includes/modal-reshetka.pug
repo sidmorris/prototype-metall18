@@ -2,9 +2,9 @@ extend ../_layout-modal.pug
 
 append opt
 	- var service = serviceNav.reshetka;
-	- var title = service.title;
-	- var slug = service.slug;
+	- var cardTitle =  'Title Card';
+	- var cardDesc =  'Card description default';
 
 block modalContent
-	p= slug
-	p= title
+	+cardTable('Крыша')
+		| Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto velit possimus illum ipsa obcaecati in tempore cum fugiat esse aspernatur!

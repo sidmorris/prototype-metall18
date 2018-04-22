@@ -1,10 +1,14 @@
 .site-logo {
-	&__icon {
-		padding-left: 0;
-		&>.icon {
-			font-size: 3.2rem;
-			fill: #ffff;
-			stroke: none;
+	padding-top: 20px;
+	padding-left: 0;
+	.icon {
+		font-size: 2rem;
+		fill: #ffff;
+		stroke: none;
+	}
+	@include bp-s {
+		.icon {
+			font-size: 3rem;
 		}
 	}
 }

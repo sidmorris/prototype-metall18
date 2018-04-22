@@ -1,14 +1,56 @@
 .herou {
   color: $color-accent-5;
   text-shadow: 1px 1px darken($color-accent-5, 40);
-  &__title {
-    font-size: 45px;
-    color: inherit;
-    font-weight: normal;
+  text-align: center;
+  &> :last-child {
+    margin-bottom: 40px;
   }
-  &__desc {
-    color: inherit;
-    font-size: 18px;
+  @include bp-s {
+    text-align: left;
+    .herou__title {
+      text-align: left;
+      padding-top: 20px;
+      font-size: 35px;
+    }
+    .herou__desc {
+      &>:first-child{
+        margin-bottom: 5px;
+      }
+      &>:not(:first-child) {
+        margin: 5px 0;
+        display: block;
+      }
+    }
+  }
+  @include bp-m {
+    .herou__title {
+      // text-align: left;
+      font-size: 40px;
+    }
+    .herou__desc{
+      font-size: 22px;
+
+    }
+  }
+  @include bp-l {
+    .herou__title {
+      font-size: 45px; // text-align: left;
+    }
+  }
+}
+
+.herou__title {
+  color: inherit;
+  font-size: 25px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.herou__desc {
+  color: inherit;
+  font-size: 18px;
+  &>:not(:first-child) {
+    display: none;
   }
 }
 

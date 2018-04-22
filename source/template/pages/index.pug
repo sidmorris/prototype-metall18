@@ -10,40 +10,28 @@ block content
 	header#header.header
 		.uk-container
 			//- navbar
-			nav(class="uk-navbar-container uk-navbar-transparent uk-navbar" uk-navbar)
-				.uk-navbar-left.site-logo
-					a(href="index.html" class="site-logo__icon uk-navbar-item uk-logo")
-						+iconInline('site-logo')
-				.uk-navbar-center
-					ul.uk-navbar-nav
-						li.active: a(href="/"  uk-scroll="") Главная
-						li: a(href="#gallery"   uk-scroll="") Фотогалерея
-						li: a(href="#contact"   uk-scroll="") Контакты
-				.uk-navbar-right
-					.phone
-						//- span(uk-icon='icon:receiver')
-						| +7 (000) 000-00-00
+			include ../includes/navbar.pug
 			//- ================================
 			.herou.header__herou
 				h1(class="herou__title")
 					| Металлоконструкции на заказ
 				hr
-				p(class="herou__desc") 
-					| Изготовление изделий из металла, любой сложности.
-					| Мангалы нестандартных размеров, ограждения для цветников и клумб,
-					| Навесы для автомобилей, садовая мебель для дачи и дома и многое другое.
+				.herou__desc
+					p Изготовление изделий из металла, любой сложности.
+					p Мангалы нестандартных размеров, ограждения для цветников и клумб,
+					p Навесы для автомобилей, садовая мебель для дачи и дома и многое другое.
 	//- ========================================
-	section#service.section-service
-		.service-nav
-			.service-nav__list
-				each item in serviceNav
-					a(href=`#modal-${item.slug}` class="service-nav__item" uk-toggle="")
+	section.service-nav
+		div(class="service-nav__list uk-flex-center uk-child-width-auto@m uk-child-width-1-3@s uk-child-width-1-2" uk-grid='')
+			each item in serviceNav
+				div.service-nav__item
+					a(href=`#modal-${item.slug}` uk-toggle="")
 						+iconInline(item.slug)
 						.service-nav__title= item.title
 	//- =======================================
 	section#gallery.gallery
 		.uk-container
-			h2(class="gallery__title uk-heading-divider") Фотогаллерея
+			//- h2(class="gallery__title uk-heading-divider") Фотогаллерея
 			div(class="gallery__container uk-slideshow" uk-slideshow="min-height: 300; max-height: 600")
 				ul(class="gallery__items uk-slideshow-items")
 					- var n=1;
@@ -57,20 +45,7 @@ block content
 				ul(class="gallery__dotnav uk-slideshow-nav uk-dotnav uk-flex-center uk-margin")
 	section#contact.contact
 		.uk-container
-			//- h2(class="contact__title") Контакты
-			.contact__container
-				.contact__map.map
-					.map__yandex
-				.contact__requisite.requisite
-					.requisite__phohe
-						span Телефон:
-						span +7 (000) 000-00-00
-					.requisite__mail
-						span Почта:
-						span mail@mail.ru
-					.requisite__location 
-						span Адрес:
-						span address siti street
+			include ../includes/contact.pug
 	//- modal content
 	include ../includes/modal-mangal.pug
 	include ../includes/modal-naves.pug

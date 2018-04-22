@@ -1,4 +1,7 @@
 .phone {
   color: $color-accent-1;
   font-size: 20px;
+  @include bp-s{
+    padding-top: 20px;
+  }
 }

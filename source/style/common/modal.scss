@@ -20,15 +20,18 @@
 .modal__header{
 	display: flex;
 	align-items: center;
-	background: $color-accent-2;
-	color: $color-accent-5;
+	color: $color-main-text;
 
 }
 .modal__close{
 	margin-left: auto;
-	color: $color-accent-5;
+	color: $color-main-text;
+	.icon{
+		font-size: 3rem;
+    stroke-width: .5;
+	}
 	&:hover{
-		color: transparentize($color-accent-5, .3);
+		color: transparentize($color-main-text, .3);
 		
 	}
 }

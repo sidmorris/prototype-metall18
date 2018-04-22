@@ -1,0 +1,40 @@
+.card {
+  margin-top: 30px;
+}
+
+.card__img {
+  overflow: hidden;
+  position: relative;
+  max-width: 600px;
+  &>img {
+    max-width: 100% !important;
+    height: auto;
+    box-sizing: border-box;
+  }
+}
+
+.card__title {
+  font-weight: bold;
+  font-size: 18px;
+  @include bp-s {
+    font-size: 20px;
+  }
+}
+
+.card__desc,
+.card__title {
+  &:after {
+    content: "";
+    display: block;
+    width: 100px;
+    max-width: 100%;
+    border-top: 1px solid #e5e5e5;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+.card__table{
+  .td-title{
+    font-weight: bold;
+  }
+}

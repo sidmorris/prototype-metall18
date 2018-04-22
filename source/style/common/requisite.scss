@@ -1,32 +1,36 @@
-.requisite{
-  display: flex;
+.requisite {
+	display: flex;
 	align-content: stretch;
 	flex-wrap: wrap;
-  box-sizing: border-box;
-	border-left: 1px solid $color-accent-4;
+	box-sizing: border-box;
 	min-height: 300px;
-	&>*{
-		width:  100%;
+	&>* {
+		width: 100%;
 		border-bottom: 1px solid $color-accent-4;
 		display: flex;
-		justify-content: center;
+		align-content: center;
 		align-items: center;
-		&:last-child{
-			border-bottom: 1px solid transparent;
-			
-		}
-		&>*{
+		flex-wrap: wrap;
+		&>* {
 			color: $color-accent-3;
 			width: 250px;
-			flex-grow: 3;
+			flex-grow: 1;
 			padding-left: 50px;
-			&:first-child{
+			&:first-child {
 				font-weight: bold;
 				width: 100px;
-				flex-grow: 1;
-				text-align: right;
+				flex-grow: 1; // text-align: right;
 			}
 		}
+	}
+}
 
+@include bp-m {
+	.requisite {
+		width: 50%;
+		border-left: 1px solid $color-accent-3;
+		&>*:last-child {
+			border-bottom: 1px solid transparent;
+		}
 	}
 }

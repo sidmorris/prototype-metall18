@@ -2,24 +2,48 @@
 @import 'sprite';
 // 1. Your custom variables and variable overwrites.
 @import "vars.scss";
-
 // 2. Import default variables and available mixins.
 @import "variables.scss";
 @import "mixins.scss";
-
 // 3. Your custom mixin overwrites.
-@mixin hook-modal-title(){
+@mixin bp-s() {
+	@media (min-width: $breakpoint-small) {
+		@content;
+	}
+}
+
+@mixin bp-m() {
+	@media (min-width: $breakpoint-medium) {
+		@content;
+	}
+}
+
+@mixin bp-l() {
+	@media (min-width: $breakpoint-large) {
+		@content;
+	}
+}
+
+@mixin bp-xl() {
+	@media (min-width: $breakpoint-xlarge) {
+		@content;
+	}
+}
+
+
+@mixin hook-modal-title() {
 	color: $color-accent-5;
 }
-@mixin hook-modal-header(){
-display: flex;
+
+@mixin hook-modal-header() {
+	display: flex;
 }
+
 // 4. Import UIkit
 // Base
 @import "variables.scss";
 @import "mixin.scss";
 // @import "base.scss";
-
 // Elements
 @import "link.scss";
 @import "heading.scss";
@@ -31,14 +55,12 @@ display: flex;
 @import "form-range.scss";
 @import "form.scss"; // After: Icon, Form Range
 @import "button.scss";
-
 // Layout
 @import "section.scss";
 @import "container.scss";
 @import "grid.scss";
 @import "tile.scss";
 @import "card.scss";
-
 // Common
 @import "close.scss"; // After: Icon
 @import "spinner.scss"; // After: Icon
@@ -51,7 +73,6 @@ display: flex;
 @import "article.scss"; // After: Subnav
 @import "comment.scss"; // After: Subnav
 @import "search.scss"; // After: Icon
-
 // Navs
 @import "nav.scss";
 @import "navbar.scss"; // After: Card, Grid, Nav, Icon, Search
@@ -62,7 +83,6 @@ display: flex;
 @import "slidenav.scss"; // After: Icon
 @import "dotnav.scss";
 @import "thumbnav.scss";
-
 // JavaScript
 @import "accordion.scss";
 @import "drop.scss"; // After: Card
@@ -77,7 +97,6 @@ display: flex;
 // Scrollspy
 // Toggle
 // Scroll
-
 // Additional
 @import "iconnav.scss";
 @import "notification.scss";
@@ -86,7 +105,6 @@ display: flex;
 @import "progress.scss";
 @import "sortable.scss";
 @import "countdown.scss";
-
 // Utilities
 @import "animation.scss";
 @import "width.scss";
@@ -103,10 +121,8 @@ display: flex;
 @import "transition.scss";
 @import "visibility.scss";
 @import "inverse.scss";
-
 // Need to be loaded last
 @import "print.scss";
-
 // Import site styles
 @import "site-base";
 @import "site-utilites";

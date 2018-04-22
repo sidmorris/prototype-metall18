@@ -4,10 +4,9 @@
   min-height: 100px;
   max-height: 800px;
   background: linear-gradient(to bottom, desaturate(darken($color-accent-2, 30), 1.5) 0%, $color-accent-2 100%);
-  &__herou {
-    margin-top: 40px;
-    &> :last-child {
-      margin-bottom: 80px;
-    }
-  }
+}
+
+.header__herou {
+  margin-top: 20px;
+  
 }
