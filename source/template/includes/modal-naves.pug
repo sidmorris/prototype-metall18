@@ -2,9 +2,8 @@ extend ../_layout-modal.pug
 
 append opt
 	- var service = serviceNav.naves;
-	- var cardTitle =  'Title Card';
-	- var cardDesc =  'Card description default';
 
 block modalContent
-	+cardTable('Крыша')
-		| Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto velit possimus illum ipsa obcaecati in tempore cum fugiat esse aspernatur!
+	+card('naves.jpg', 'Беседка большая', "Описание для беседки большой")
+		+cardTable('Крыша')
+			| Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto velit possimus illum ipsa obcaecati in tempore cum fugiat esse aspernatur!
